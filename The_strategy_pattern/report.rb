@@ -8,6 +8,6 @@ class Report
   end
 
   def output_report
-    @formatter.output_report(title: @title, text: @text)
+    @formatter.output_report(self)
   end
 end

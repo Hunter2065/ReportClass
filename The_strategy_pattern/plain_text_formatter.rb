@@ -1,10 +1,8 @@
-require_relative 'formatter'
+class PlainTextFormatter
+  def output_report(context)
+    puts "**** #{context.title} ****"
 
-class PlainTextFormatter < Formatter
-  def output_report(title:, text:)
-    puts "**** #{title} ****"
-
-    text.each do |line|
+    context.text.each do |line|
       puts line
     end
   end
